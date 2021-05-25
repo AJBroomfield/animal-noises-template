@@ -1,0 +1,16 @@
+version: "3.8"
+services: 
+    animal-api:
+        container_name: animal_noises_api
+        image: animal-api:latest
+        build: ./animal_api
+    animal-server:
+        container_name: animal_noises_server
+        image: animal-sever:latest
+        build: ./server
+        ports:
+        - target: 5000
+          published: 5000
+
+
+        
